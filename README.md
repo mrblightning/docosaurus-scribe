@@ -1,2 +1,2 @@
 # docosaurus-scribe
-scribe docosaurus documentation project
+scribe docosaurus documentation project of course
