@@ -2,9 +2,7 @@
 sidebar_position: 1
 ---
 
-# Scribe's CLI tool
-
-## Overview
+# Overview
 
 The Scribe CLI tool is designed to allow you to create a full Software Bill of Materials (SBOM) of any docker image or file folder you have access to, down to the file level. There will be no more hidden files or dependencies in any of the packages or images you are working with.
 

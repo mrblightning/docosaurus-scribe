@@ -3,7 +3,7 @@ sidebar_position: 1
 ---
 # Getting started
 
-Scribe is a solution for DevSecOps teams and Security teams who want to govern security of software in the development process. Scribe enables you to collect and share evidence about the level of the process security you utilize. You can share such evidence with stakeholders (software consumers) internal to your organization or external to it. For example, with Scribe you can analyze and share the Software Bill of Materials (SBOM) of your product with your customers.
+Scribe is a solution for DevSecOps teams and Security teams who want to govern security of software in the development process. Scribe enables you to collect and share evidence about the security level of these processes. You can share such evidence with stakeholders who are responsible for the internal deployment or with external consumers of your software. For example, with Scribe you can analyze and share the Software Bill of Materials (<a href='https://scribesecurity.com/sbom/'>SBOM</a>) of your product with your customers.
 ## QuickStart
 
 Find out what all the components that made their way into your Node.js’s project final docker image are and make sure they are all identical when compared to their origin.
