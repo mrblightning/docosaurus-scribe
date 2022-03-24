@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkscribe=self.webpackChunkscribe||[]).push([[4629],{9745:function(s){s.exports=JSON.parse('{"allTagsPath":"/docosaurus-scribe/blog/tags","slug":"/docosaurus-scribe/blog/tags/hola","name":"hola","count":1,"permalink":"/docosaurus-scribe/blog/tags/hola"}')}}]);
