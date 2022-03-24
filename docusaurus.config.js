@@ -9,12 +9,12 @@ const config = {
   title: 'My Site',
   tagline: 'Dinosaurs are cool',
   url: 'https://MrBLightning.github.io',
-  baseUrl: '/',
+  baseUrl: '/docosaurus-scribe/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'MrBLightning', // Usually your GitHub org/user name.
-  projectName: 'MrBLightning', // Usually your repo name.
+  projectName: 'docosaurus-scribe', // Usually your repo name.
   trailingSlash: false,
   presets: [
     [
