@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'My Site',
   tagline: 'Dinosaurs are cool',
-  url: 'https://scribe-security.github.io',
+  url: 'https://MrBLightning.github.io',
   baseUrl: '/docosaurus-scribe/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
