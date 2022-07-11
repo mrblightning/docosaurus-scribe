@@ -17,7 +17,7 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/start">
+            to="/docs/overview">
             Docusaurus Tutorial - 5min ⏱️
           </Link>
         </div>
@@ -29,7 +29,7 @@ function HomepageHeader() {
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <Redirect to="/docs/start"/>
+    <Redirect to="/docosaurus-scribe/docs/overview"/>
     // <Layout
     //   title={`Hello from ${siteConfig.title}`}
     //   description="Description will go into a meta tag in <head />">

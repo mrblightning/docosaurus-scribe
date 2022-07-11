@@ -8,12 +8,12 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'My Site',
   tagline: 'Dinosaurs are cool',
-  url: 'https://MrBLightning.github.io',
+  url: 'https://scribe-security.github.io',
   baseUrl: '/docosaurus-scribe/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'MrBLightning', // Usually your GitHub org/user name.
+  organizationName: 'scribe-security', // Usually your GitHub org/user name.
   projectName: 'docosaurus-scribe', // Usually your repo name.
   trailingSlash: false,
   presets: [
@@ -24,13 +24,13 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          // editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          // editUrl:
+          //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -51,15 +51,27 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'cli-tool/overview',
+            docId: 'intro',
             position: 'left',
-            label: 'CLI Tool',
+            label: 'Getting Started',
           },
           {
             type: 'doc',
-            docId: 'check_cves',
+            docId: 'overview',
             position: 'left',
-            label: 'Check CVEs',
+            label: 'Overview',
+          },
+          {
+            type: 'doc',
+            docId: 'gensbomcli',
+            position: 'left',
+            label: 'Generate an SBOM from CLI',
+          },
+          {
+            type: 'doc',
+            docId: 'cves',
+            position: 'left',
+            label: 'Detecting CVEs',
           }
           // {to: '/blog', label: 'Blog', position: 'left'},
           // {
@@ -77,7 +89,7 @@ const config = {
             items: [
               {
                 label: 'Tutorial',
-                to: '/docs/intro',
+                to: '/docs/overview',
               },
             ],
           },
