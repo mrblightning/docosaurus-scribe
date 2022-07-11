@@ -13,7 +13,7 @@ const config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'scribe-security', // Usually your GitHub org/user name.
+  organizationName: 'MrBLightning', // Usually your GitHub org/user name.
   projectName: 'docosaurus-scribe', // Usually your repo name.
   trailingSlash: false,
   presets: [
