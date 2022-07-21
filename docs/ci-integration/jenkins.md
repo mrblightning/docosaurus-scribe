@@ -39,7 +39,7 @@ pipeline {
             --output-directory ./scribe/gensbom \
              -E -U $SCRIBE_CLIENT_ID -P $SCRIBE_CLIENT_SECRET \
              --scribe.loginurl=https://scribesecurity-staging.us.auth0.com --scribe.auth0.audience=api.staging.scribesecurity.com --scribe.url https://api.staging.scribesecurity.com \
-            -vv'''
+            -v'''
           }
         }
       }
@@ -58,7 +58,7 @@ pipeline {
             --output-directory ./scribe/gensbom \
             -E -U $SCRIBE_CLIENT_ID -P $SCRIBE_CLIENT_SECRET \
             --scribe.loginurl=https://scribesecurity-staging.us.auth0.com --scribe.auth0.audience=api.staging.scribesecurity.com --scribe.url https://api.staging.scribesecurity.com \
-            -vv'''
+            -v'''
           }
         }
       }
@@ -75,7 +75,7 @@ pipeline {
             # the default location for the report to be downloaded here is 'scribe/valint'
             -U $SCRIBE_CLIENT_ID -P $SCRIBE_CLIENT_SECRET --output-directory scribe/valint \
             --scribe.loginurl=https://scribesecurity-staging.us.auth0.com --scribe.auth.audience=api.staging.scribesecurity.com --scribe.url https://api.staging.scribesecurity.com \
-            -vv'''
+            -v'''
           }
           publish()
         }

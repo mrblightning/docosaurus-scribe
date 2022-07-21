@@ -35,5 +35,5 @@ In this example the report will be downloaded into 'scribe/valint'. The credenti
 
 ```
 valint report -U \
- --scribe.clientid=****** -P --scribe.clientsecret=****** --output-directory scribe/valint -vv
+ --scribe.clientid=****** -P --scribe.clientsecret=****** --output-directory scribe/valint -v
 ```
