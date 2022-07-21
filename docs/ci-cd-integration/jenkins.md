@@ -11,7 +11,7 @@ Important to note that this is for Jenkins over Kubernetes only.
 Full workflow example, uploading evidence using gensbom and downloading the report using valint.
 In this example the final step is to attach the report and evidence to your pipeline run.
 
-This example pipeline YAML file does a checkout on a docker image, creates an *SBOM* for it from the loacl repository, creates another *SBOM* from the docker image and, finally, downloads the integrity report from the Scribe backend. 
+This example pipeline YAML file does a checkout on a docker image, creates an *SBOM* for it from the local repository, creates another *SBOM* from the docker image and, finally, downloads the integrity report from the Scribe backend. 
 
 ```bash
 pipeline {

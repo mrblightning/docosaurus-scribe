@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Other CI Systems
 
-In order to integrate our tools into any other CI/CD pipeline you'll need to download the two tools, gensbom and valint. Once you have the tools you can implement their CLI commands in any any pipeline you want.
+In order to integrate our tools into any other CI pipeline you'll need to download the two tools, gensbom and valint. Once you have the tools you can implement their CLI commands in any any pipeline you want.
 
 ## Download the tools
 
