@@ -8,16 +8,10 @@ In order to integrate our tools into any other CI pipeline you'll need to downlo
 
 ## Download the tools
 
-Get the gensbom tool
+You can use this command to download both the gensbom tool and the valint tool
 
 ```
-curl https://www.scribesecurity.com/getscribe | sh
-```
-
-Get the valint tool
-
-```
-curl https://www.scribesecurity.com/getscribe | sh
+curl -sSfL https://raw.githubusercontent.com/scribe-security/misc/master/install.sh | sh
 ```
 
 ## Get the *SBOMs* 
