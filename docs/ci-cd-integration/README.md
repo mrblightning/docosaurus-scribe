@@ -9,14 +9,14 @@ Scribe allows you to integrate our *SBOM* creation tool and our report directly 
 
 No matter the pipeline the basic operation is the same: You need to create two *SBOMs*, one of the repository files and one of the final image using gensbom. Then, you need to call the integrity report from Scrib's backend using Valint.  
 
-<img src='../img/cicd/cicd_diagram.jpg' alt='Grype alpine' width="100%"/>
+<img src='../img/ci/ci_diagram.jpg' alt='Grype alpine' width="100%"/>
 
 :::info GitHub actions
-<img src='../img/cicd/github.png' alt='GitHub' width="30px"/> Integrate as a step in <b><a href='/docosaurus-scribe/docs/ci-cd-integration/github-actions'>GitHub actions</a></b>. 
+<img src='../img/ci/github.png' alt='GitHub' width="30px"/> Integrate as a step in <b><a href='/docosaurus-scribe/docs/ci-cd-integration/github-actions'>GitHub actions</a></b>. 
 :::
 
 :::info Jenkins
-<img src='../img/cicd/jenkins.png' alt='Jenkins' width="30px"/> Integrate as a step in a <b><a href='/docosaurus-scribe/docs/ci-cd-integration/jenkins'>Jenkins</a></b> pipeline.  
+<img src='../img/ci/jenkins.png' alt='Jenkins' width="30px"/> Integrate as a step in a <b><a href='/docosaurus-scribe/docs/ci-cd-integration/jenkins'>Jenkins</a></b> pipeline.  
 Important to note that this is for <b>Jenkins over Kubernetes</b> only. 
 :::
 
