@@ -6,17 +6,17 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-    title: 'My Site',
-    tagline: 'Dinosaurs are cool',
-    url: 'https://scribe-security.github.io',
-    baseUrl: '/docosaurus-scribe/',
-    onBrokenLinks: 'throw',
-    onBrokenMarkdownLinks: 'warn',
-    favicon: 'img/favicon.ico',
-    organizationName: 'scribe-security', // Usually your GitHub org/user name.
-    projectName: 'docosaurus-scribe', // Usually your repo name.
-    trailingSlash: false,
-    presets: [
+  title: 'My Site',
+  tagline: 'Dinosaurs are cool',
+  url: 'https://MrBLightning.github.io',
+  baseUrl: '/docosaurus-scribe/',
+  onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'warn',
+  favicon: 'img/favicon.ico',
+  organizationName: 'MrBLightning', // Usually your GitHub org/user name.
+  projectName: 'docosaurus-scribe', // Usually your repo name.
+  trailingSlash: false,
+  presets: [
     [
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
@@ -47,7 +47,6 @@ const config = {
         logo: {
           alt: 'Scribe Security Logo',
           src: 'img/Scribe_dark.svg',
-          srcDark: 'img/Scribe_white.svg',
         },
         items: [
           {
