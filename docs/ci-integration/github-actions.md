@@ -64,7 +64,7 @@ jobs:
            scribe-enable: true
            scribe-clientid: ${{ secrets.clientid }}
            scribe-clientsecret: ${{ secrets.clientsecret }}
-           scribe-projectid: ${{ secrets.projectid }}
+           scribe-projectkey: ${{ secrets.projectkey }}
 
       - name: Build and push remote
         uses: docker/build-push-action@v2
@@ -82,7 +82,7 @@ jobs:
            scribe-enable: true
            scribe-clientid: ${{ secrets.clientid }}
            scribe-clientsecret: ${{ secrets.clientsecret }}
-           scribe-projectid: ${{ secrets.projectid }}
+           scribe-projectkey: ${{ secrets.projectkey }}
 
       - uses: actions/upload-artifact@v2
         with:
