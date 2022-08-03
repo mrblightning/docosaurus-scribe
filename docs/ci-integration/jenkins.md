@@ -54,7 +54,7 @@ pipeline {
                 }
 
                 container('gensbom') {
-                    // these credentials can be copied from your CLI page: https://mui.production.scribesecurity.com/install-scribe
+                    // these credentials can be copied from your CLI page: https://beta.hub.scribesecurity.com/producer-products
                     withCredentials([usernamePassword(credentialsId: 'scribe-staging-auth-id', usernameVariable: 'SCRIBE_CLIENT_ID', passwordVariable: 'SCRIBE_CLIENT_SECRET')]) {
                         // this stage creats the first SBOM
                         sh '''
@@ -73,7 +73,7 @@ pipeline {
         stage('image-bom') {
             steps {
                 container('gensbom') {
-                    // these credentials can be copied from your CLI page: https://mui.production.scribesecurity.com/install-scribe
+                    // these credentials can be copied from your CLI page: https://beta.hub.scribesecurity.com/producer-products
                     withCredentials([usernamePassword(credentialsId: 'scribe-staging-auth-id', usernameVariable: 'SCRIBE_CLIENT_ID', passwordVariable: 'SCRIBE_CLIENT_SECRET')]) {
                         // this stage creats the second SBOM 
                         sh '''
@@ -92,7 +92,7 @@ pipeline {
         stage('download-report') {
             steps {
                 container('valint') {
-                    // these credentials can be copied from your CLI page: https://mui.production.scribesecurity.com/install-scribe
+                    // these credentials can be copied from your CLI page: https://beta.hub.scribesecurity.com/producer-products
                     withCredentials([usernamePassword(credentialsId: 'scribe-staging-auth-id', usernameVariable: 'SCRIBE_CLIENT_ID', passwordVariable: 'SCRIBE_CLIENT_SECRET')]) {
                         // this stage downloads the integrity report from Scribe's backend   
                         sh '''

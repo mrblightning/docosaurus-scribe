@@ -15,7 +15,7 @@ to get Scribe's integrity report of the result.
 Use default configuration path `.gensbom.yaml` to make sure you have set all the input parameters you need.  
 At minimum, you need to set the scribe `clientid` and `clientsecret`.  
 
-These credentials can be copied from your <a href='https://mui.production.scribesecurity.com/install-scribe'>CLI page</a>.
+These credentials can be copied from your <a href='https://beta.hub.scribesecurity.com/producer-products'>CLI page</a>.
 
 ```yaml
   scribe-clientid: <scribe-client-id>
