@@ -15,17 +15,17 @@ curl -sSfL https://raw.githubusercontent.com/scribe-security/misc/master/install
 ```
 
 ## Set Credentials
-In order for the integration to work you must first set the secrets provided for you at the <a href='https://beta.hub.scribesecurity.com/producer-products'>'add project'</a> page in your environment / credential store. Of the provided secrets, `clientid` and `clientsecret` are identical for all your future projects and `productkey` is unique for this particular project only.
+In order for the integration to work you must first set the secrets provided for you at the <a href='https://beta.hub.scribesecurity.com'>'add project'</a> page in your environment / credential store. Of the provided secrets, `clientid` and `clientsecret` are identical for all your future projects and `productkey` is unique for this particular project only.
 
 Here's an example for setting your `clientid` credential:
 ```
 CLIENT_ID=<client_id>
 ```
-Instead of `<client_id>` enter the `clientid` credential downloaded from the <a href='https://beta.hub.scribesecurity.com/producer-products'>'add project'</a> page.
+Instead of `<client_id>` enter the `clientid` credential downloaded from the <a href='https://beta.hub.scribesecurity.com'>'add project'</a> page.
 
 ## Get the *SBOMs* 
 
-Generate an *SBOM* for your source code. The credentials can be copied from the <a href='https://beta.hub.scribesecurity.com/producer-products'>'add project'</a> page.
+Generate an *SBOM* for your source code. The credentials can be copied from the <a href='https://beta.hub.scribesecurity.com'>'add project'</a> page.
 
 
 ```bash
