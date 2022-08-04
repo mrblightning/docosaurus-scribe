@@ -7,8 +7,8 @@ sidebar_position: 4
 You can try out Scribe with an open-source Node.js project at:  
 https://github.com/scribe-security/image-demo
 
-First you need to go to the Scribe Hub <a href='https://beta.hub.scribesecurity.com/producer-products'>projects page</a> and add a `image-demo` project. Once you do, you'll get 3 forms of credentials: `clientid`, `clientsecret` and `projectkey`.
-Of the provided secrets, `clientid` and `clientsecret` are identical for all your future projects and `projectkey` is unique for this particular project only. If you want to keep using these credentials for multiple projects we recommend you set them up as environment variables.
+First you need to go to the Scribe Hub <a href='https://beta.hub.scribesecurity.com/producer-products'>projects page</a> and add a `image-demo` project. Once you do, you'll get 3 forms of credentials: `clientid`, `clientsecret` and `productkey`.
+Of the provided secrets, `clientid` and `clientsecret` are identical for all your future projects and `productkey` is unique for this particular project only. If you want to keep using these credentials for multiple projects we recommend you set them up as environment variables.
 
 Here's an example for setting your `clientid` credential as an environment variable:
 ```
