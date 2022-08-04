@@ -70,17 +70,16 @@ pipeline {
                 }
 
                 container('gensbom') {
-                    // these credentials can be copied from your CLI page: https://beta.hub.scribesecurity.com
+                    // these credentials can be copied from your CLI page: 
                     withCredentials([usernamePassword(credentialsId: 'scribe-staging-auth-id', usernameVariable: 'SCRIBE_CLIENT_ID', passwordVariable: 'SCRIBE_CLIENT_SECRET', productkeyVariable: 'SCRIBE_PRODUCT_KEY')]) {
                         // this stage creats the first SBOM
+                        // it is created on the local directory, running on the source code of the image
                         sh '''
-                        // this SBOM is created on the local directory, it is running on the source code of the image
-                        gensbom dir: mongo - express - scm\
-                            --context - type jenkins\
-                            --output - directory. / scribe / gensbom\ 
-                            -E - U $SCRIBE_CLIENT_ID - P $SCRIBE_CLIENT_SECRET \
+                        gensbom bom dir:mongo-express-scm \
+                            --context-type jenkins \
+                            --output-directory ./scribe/gensbom \ 
+                            -E -U $SCRIBE_CLIENT_ID -P $SCRIBE_CLIENT_SECRET \
                             --product-key $SCRIBE_PRODUCT_KEY \
-                            --scribe.loginurl = https: //scribesecurity-staging.us.auth0.com --scribe.auth0.audience=api.staging.scribesecurity.com --scribe.url https://api.staging.scribesecurity.com \
                             -v '''
                     }
                 }
@@ -93,14 +92,13 @@ pipeline {
                     // these credentials can be copied from your CLI page: https://beta.hub.scribesecurity.com
                     withCredentials([usernamePassword(credentialsId: 'scribe-staging-auth-id', usernameVariable: 'SCRIBE_CLIENT_ID', passwordVariable: 'SCRIBE_CLIENT_SECRET', productkeyVariable: 'SCRIBE_PRODUCT_KEY')]) {
                         // this stage creats the second SBOM 
+                        // the SBOM is created on the docker image, running on the uploaded image of this repository
                         sh '''
-                        // this SBOM is created on the docker image, it is running on the uploaded image of this repository
-                        gensbom mongo - express: 1.0 .0 - alpha .4\
-                            --context - type jenkins\
-                            --output - directory. / scribe / gensbom\ 
-                            -E - U $SCRIBE_CLIENT_ID - P $SCRIBE_CLIENT_SECRET \
+                        gensbom bom mongo-express:1.0 .0-alpha.4 \
+                            --context-type jenkins \
+                            --output-directory ./scribe/gensbom \ 
+                            -E -U $SCRIBE_CLIENT_ID -P $SCRIBE_CLIENT_SECRET \
                             --product-key $SCRIBE_PRODUCT_KEY \
-                            --scribe.loginurl = https: //scribesecurity-staging.us.auth0.com --scribe.auth0.audience=api.staging.scribesecurity.com --scribe.url https://api.staging.scribesecurity.com \
                             -v '''
                     }
                 }
