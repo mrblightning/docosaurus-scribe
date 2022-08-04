@@ -48,19 +48,27 @@ const config = {
           alt: 'Scribe Security Logo',
           src: 'img/Scribe_dark.svg',
           srcDark: 'img/Scribe_white.svg',
+          href: 'https://scribesecurity.com/'
         },
         items: [
+          {
+            type: 'doc',
+            docId: 'overview',
+            position: 'left',
+            label: 'Overview',
+          },
           {
             type: 'doc',
             docId: 'intro',
             position: 'left',
             label: 'Getting Started',
           },
+          {to: 'docs/ci-integrations/', label: 'CI Integration', position: 'left'},          
           {
             type: 'doc',
-            docId: 'overview',
+            docId: 'sampleproject',
             position: 'left',
-            label: 'Overview',
+            label: 'Sample Project',
           },
           {
             type: 'doc',

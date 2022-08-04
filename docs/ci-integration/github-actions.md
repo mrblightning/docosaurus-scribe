@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 # GitHub Actions
@@ -12,6 +12,8 @@ In order for the integration to work you must first set the repository specific 
 
 ## Creating encrypted secrets for a repository
 
+The instructions on how to configure secrets in GitHub can be found in the GitHub documentation <a href='https://docs.github.com/en/actions/security-guides/encrypted-secrets'>here</a>. For your convenience we present the instructions here as well.
+
 To create secrets for a personal account repository, you must be the repository owner. To create secrets for an organization repository, you must have `admin` access.
 
 1. On GitHub.com, navigate to the main page of the repository.
@@ -23,7 +25,6 @@ To create secrets for a personal account repository, you must be the repository 
 7. Click <b>Add secret</b>.
 
 If your repository has environment secrets or can access secrets from the parent organization, then those secrets are also listed on this page.
-You can read more about the configuration of secrets in the GitHub documentation <a href='https://docs.github.com/en/actions/security-guides/encrypted-secrets'>here</a>.
 
 ## Scribe *SBOM* upload - full pipeline example
 

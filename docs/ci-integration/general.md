@@ -14,19 +14,28 @@ You can use this command to download *gensbom*
 curl -sSfL https://raw.githubusercontent.com/scribe-security/misc/master/install.sh | sh
 ```
 
+## Set Credentials
+In order for the integration to work you must first set the secrets provided for you at the <a href='https://beta.hub.scribesecurity.com/producer-products'>'add project'</a> page in your environment / credential store. Of the provided secrets, `clientid` and `clientsecret` are identical for all your future projects and `projectkey` is unique for this particular project only.
+
+Here's an example for setting your `clientid` credential:
+```
+CLIENT_ID=<client_id>
+```
+Instead of `<client_id>` enter the `clientid` credential downloaded from the <a href='https://beta.hub.scribesecurity.com/producer-products'>'add project'</a> page.
+
 ## Get the *SBOMs* 
 
 Generate an *SBOM* for your source code. The credentials can be copied from the <a href='https://beta.hub.scribesecurity.com/producer-products'>'add project'</a> page.
 
 
 ```bash
-gensbom bom dir:<path> --scribe.clientid=****** -P --scribe.clientsecret=****** --scribe.projectkey=****** -E -f -v
+gensbom bom dir:<path> --scribe.clientid=CLIENT_ID -P --scribe.clientsecret=CLIENT_SECRET --scribe.projectkey=PROJECT_KEY -E -f -v
 ```
 
 Generate an *SBOM* for your final image.
 
 ```bash
-gensbom bom <your_docker_repository:tag> --scribe.clientid=****** -P --scribe.clientsecret=****** --scribe.projectkey=****** -E -f -v
+gensbom bom <your_docker_repository:tag> --scribe.clientid=CLIENT_ID -P --scribe.clientsecret=CLIENT_SECRET --scribe.projectkey=PROJECT_KEY -E -f -v
 ```
 
 And that's it - once these two steps finished you can go to the project page on Scribe Hub and examine the integrity report.
