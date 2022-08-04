@@ -63,7 +63,7 @@ const config = {
             position: 'left',
             label: 'Getting Started',
           },
-          {to: 'docs/ci-integrations/', label: 'CI Integration', position: 'left'},          
+          {to: 'docs/ci-integration/', label: 'CI Integration', position: 'left'},          
           {
             type: 'doc',
             docId: 'sampleproject',
