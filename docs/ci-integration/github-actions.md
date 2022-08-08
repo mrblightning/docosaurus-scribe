@@ -60,7 +60,7 @@ jobs:
            scribe-enable: true
            scribe-clientid: ${{ secrets.clientid }}
            scribe-clientsecret: ${{ secrets.clientsecret }}
-           scribe-productkey: ${{ secrets.productkey }}
+           scribe-name: ${{ secrets.productkey }}
            scribe-loginurl: ${{ env.LOGIN_URL }}
            scribe-auth0.audience: ${{ env.AUTH0_AUDIANCE }}
            scribe-url: ${{ env.URL }}
@@ -82,11 +82,11 @@ jobs:
            scribe-enable: true
            scribe-clientid: ${{ secrets.clientid }}
            scribe-clientsecret: ${{ secrets.clientsecret }}
-           scribe-productkey: ${{ secrets.productkey }}
+           scribe-name: ${{ secrets.productkey }}
            scribe-loginurl: ${{ env.LOGIN_URL }}
            scribe-auth0.audience: ${{ env.AUTH0_AUDIANCE }}
            scribe-url: ${{ env.URL }}
-           
+
 
       - uses: actions/upload-artifact@v2
         with:

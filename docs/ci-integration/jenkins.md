@@ -64,7 +64,7 @@ pipeline {
                             --context-type jenkins \
                             --output-directory ./scribe/gensbom \ 
                             -E -U $SCRIBE_CLIENT_ID -P $SCRIBE_CLIENT_SECRET \
-                            --product-key $SCRIBE_PRODUCT_KEY \
+                            --name $SCRIBE_PRODUCT_KEY \
                             --scribe.loginurl=https://scribesecurity-beta.us.auth0.com --scribe.auth0.audience=api.beta.scribesecurity.com \
                             --scribe.url https://api.beta.scribesecurity.com \
                             -v '''
@@ -83,7 +83,7 @@ pipeline {
                             --context-type jenkins \
                             --output-directory ./scribe/gensbom \ 
                             -E -U $SCRIBE_CLIENT_ID -P $SCRIBE_CLIENT_SECRET \
-                            --product-key $SCRIBE_PRODUCT_KEY \
+                            --name $SCRIBE_PRODUCT_KEY \
                             --scribe.loginurl=https://scribesecurity-beta.us.auth0.com --scribe.auth0.audience=api.beta.scribesecurity.com \
                             --scribe.url https://api.beta.scribesecurity.com \
                             -v '''
