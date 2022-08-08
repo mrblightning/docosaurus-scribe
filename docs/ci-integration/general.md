@@ -35,11 +35,11 @@ Replace `<client_id>` with `clientid` from Scribe Hub.
 1. Optional: if your project is in Node.Js you can call *gensbom* after the checkout stage to collect evidence of hash values of the source code files to facilitate the Scribe integrity validation.
 
 ```bash
-gensbom dir:<path> --scribe.clientid=CLIENT_ID -P --scribe.clientsecret=CLIENT_SECRET --scribe.productkey=PRODUCT_KEY -E -f -v
+gensbom dir:<path> --scribe.clientid=$CLIENT_ID -P --scribe.clientsecret=$CLIENT_SECRET --scribe.productkey=$PRODUCT_KEY -E -f -v
 ```
 
 2. Call *gensbom* after the build to generate an *SBOM* from the docker image.
 
 ```bash
-gensbom <your_docker_repository:tag> --scribe.clientid=CLIENT_ID -P --scribe.clientsecret=CLIENT_SECRET --scribe.productkey=PRODUCT_KEY -E -f -v
+gensbom <your_docker_repository:tag> --scribe.clientid=$CLIENT_ID -P --scribe.clientsecret=$CLIENT_SECRET --scribe.productkey=$PRODUCT_KEY -E -f -v
 ```
