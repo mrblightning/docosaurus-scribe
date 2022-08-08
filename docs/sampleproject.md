@@ -33,7 +33,7 @@ Copy and run the following commands in a bash shell on your workstation.
 
 3. Run *gensbom* locally to collect metadata about the source code
 
-    ```$HOME/.scribe/bin/gensbom dir:image-demo --scribe.clientid=$CLIENT_ID --scribe.clientsecret=$CLIENT_SECRET --product-key=$PRODUCT_KEY -E -f -v```
+    ```$HOME/.scribe/bin/gensbom dir:image-demo --scribe.clientid=$CLIENT_ID --scribe.clientsecret=$CLIENT_SECRET --product-key=$PRODUCT_KEY --scribe.loginurl=https://scribesecurity-beta.us.auth0.com --scribe.auth0.audience=api.dummy.scribesecurity.com --scribe.url https://api.dev.scribesecurity.com/beta-scribe-hub/scribe-dev-api -E -f -v```
 
 4. Build a docker image for the project
 
@@ -43,6 +43,6 @@ Copy and run the following commands in a bash shell on your workstation.
 
 5. Run *gensbom* locally to collect metadata about the docker image
 
-    ```$HOME/.scribe/bin/gensbom image-demo:latest --scribe.clientid=$CLIENT_ID --scribe.clientsecret=$CLIENT_SECRET --product-key=$PRODUCT_KEY -E -f -v```
+    ```$HOME/.scribe/bin/gensbom image-demo:latest --scribe.clientid=$CLIENT_ID --scribe.clientsecret=$CLIENT_SECRET --product-key=$PRODUCT_KEY --scribe.loginurl=https://scribesecurity-beta.us.auth0.com --scribe.auth0.audience=api.dummy.scribesecurity.com --scribe.url https://api.dev.scribesecurity.com/beta-scribe-hub/scribe-dev-api -E -f -v```
 
 6. When *gensbom* is done press the 'done' button at the bottom of the <a href='https://beta.hub.scribesecurity.com'>page</a> and you'll be taken to the product page to review the integrity information and *SBOM*.

@@ -65,6 +65,8 @@ pipeline {
                             --output-directory ./scribe/gensbom \ 
                             -E -U $SCRIBE_CLIENT_ID -P $SCRIBE_CLIENT_SECRET \
                             --product-key $SCRIBE_PRODUCT_KEY \
+                            --scribe.loginurl=https://scribesecurity-beta.us.auth0.com --scribe.auth0.audience=api.dummy.scribesecurity.com \
+                            --scribe.url https://api.dev.scribesecurity.com/beta-scribe-hub/scribe-dev-api \
                             -v '''
                     }
                 }
@@ -82,6 +84,8 @@ pipeline {
                             --output-directory ./scribe/gensbom \ 
                             -E -U $SCRIBE_CLIENT_ID -P $SCRIBE_CLIENT_SECRET \
                             --product-key $SCRIBE_PRODUCT_KEY \
+                            --scribe.loginurl=https://scribesecurity-beta.us.auth0.com --scribe.auth0.audience=api.dummy.scribesecurity.com \
+                            --scribe.url https://api.dev.scribesecurity.com/beta-scribe-hub/scribe-dev-api \
                             -v '''
                     }
                 }
