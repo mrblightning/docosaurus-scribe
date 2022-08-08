@@ -37,7 +37,7 @@ Copy and run the following commands in a bash shell on your workstation.
 
 4. Build a docker image for the project
 
-    ```CD image-demo```
+    ```cd image-demo```
 
     ```docker build -t image-demo .```
 
