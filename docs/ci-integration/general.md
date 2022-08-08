@@ -12,10 +12,6 @@ Or when you add a new product.
 
 ## Step 1: Download *gensbom*
 ​
-In order to integrate our tools into any other CI pipeline you'll need to download *gensbom*. Once you have it you can implement its CLI commands in any any pipeline you want.
-
-## Download *gensbom*
-
 Download the Scribe *gensbom* CLI tool.
 
 ```
