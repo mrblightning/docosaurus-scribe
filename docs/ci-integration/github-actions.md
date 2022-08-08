@@ -5,7 +5,7 @@ sidebar_position: 2
 # GitHub Actions
 
 :::info Note:
-The configuration requires `productkey`, `clientid`, and `clientsecret`. credentials obtained from your Scribe hub account at: `Home>Products>[$your_product]>Setup`
+The configuration requires `productkey`, `clientid`, and `clientsecret` credentials obtained from your Scribe hub account at: `Home>Products>[$your_product]>Setup`
 
 Or when you add a new product.
 :::

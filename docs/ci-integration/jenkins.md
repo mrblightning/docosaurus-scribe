@@ -7,7 +7,7 @@ sidebar_position: 1
 Important to note that this is for Jenkins over Kubernetes only.
 
 :::info Note:
-The configuration requires `productkey`, `clientid`, and `clientsecret`. credentials obtained from your Scribe hub account at: `Home>Products>[$your_product]>Setup`
+The configuration requires `productkey`, `clientid`, and `clientsecret` credentials obtained from your Scribe hub account at: `Home>Products>[$your_product]>Setup`
 
 Or when you add a new product.
 :::
