@@ -4,9 +4,9 @@ description: Setup your CI
 
 # Setup your CI
 
-Start managing your builds’ SBOMs and validating the builds’ integrity in Scribe Hub.  
+Start managing your builds’ *SBOMs* and validating the builds’ integrity in Scribe Hub.  
 
-To generate an SBOM for every build run and upload it to Scribe Hub, integrate Scribe into your CI after your build step. If you are building a Node.JS project, you can also validate its integrity (that is, that it hasn’t been tampered with) by integrating Scribe in also after the checkout step.  
+To generate an *SBOM* for every build run and upload it to Scribe Hub, integrate Scribe into your CI after your build step. If you are building a Node.JS project, you can also validate its integrity (that is, that it hasn’t been tampered with) by integrating Scribe in also after the checkout step.  
 
 Currently, Scribe natively supports <a href='/docosaurus-scribe/docs/ci-integration/jenkins'>Jenkins over Kubernetes</a> and <a href='/docosaurus-scribe/docs/ci-integration/github-actions'>GitHub actions</a>. If you have another CI, you can integrate it with the <a href='/docosaurus-scribe/docs/ci-integration/general'>generic integration instructions</a>.  
 
