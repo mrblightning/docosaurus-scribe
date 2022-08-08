@@ -5,7 +5,7 @@ sidebar_position: 3
 # Other CI Systems
 
 :::info Note:
-The configuration requires `productkey`, `clientid`, and `clientsecret` credentials obtained from your Scribe hub account at: `Home>Products>[$your_product]>Setup`
+The configuration requires <em><b>productkey</b></em>, <em><b>clientid</b></em>, and <em><b>clientsecret</b></em> credentials obtained from your Scribe hub account at: `Home>Products>[$your_product]>Setup`
 
 Or when you add a new product.
 :::

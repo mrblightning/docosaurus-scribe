@@ -5,7 +5,7 @@ sidebar_position: 2
 # GitHub Actions
 
 :::info Note:
-The configuration requires `productkey`, `clientid`, and `clientsecret` credentials obtained from your Scribe hub account at: `Home>Products>[$your_product]>Setup`
+The configuration requires <em><b>productkey</b></em>, <em><b>clientid</b></em>, and <em><b>clientsecret</b></em> credentials obtained from your Scribe hub account at: `Home>Products>[$your_product]>Setup`
 
 Or when you add a new product.
 :::
@@ -13,8 +13,6 @@ Or when you add a new product.
 This action includes *gensbom* - the tool creating the *SBOM*.
 
 *gensbom* has other capabilities and CLI options but the simplest integration is to call it to create an *SBOM* of the repository and the final image. these *SBOMs* are then automatically uploaded to Scribe Hub.
-
-In order for the integration to work you must first set the repository specific secrets provided for you at the <a href='https://beta.hub.scribesecurity.com'>'add project'</a> page. Of the provided secrets, `clientid` and `clientsecret` are identical for all your future projects and `productkey` is unique for this particular project only.
 
 ## Step 1: Add the credentials to GitHub
 
