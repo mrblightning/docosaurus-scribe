@@ -27,8 +27,8 @@ name: example workflow
 
 env:
   LOGIN_URL: "https://scribesecurity-beta.us.auth0.com"
-  AUTH0_AUDIANCE: "api.beta.scribesecurity.com"
-  URL: "https://api.beta.scribesecurity.com"
+  AUTH0: "api.beta.scribesecurity.com"
+  SCRIBE_URL: "https://api.beta.scribesecurity.com"
 
 on: 
   push:
@@ -60,10 +60,10 @@ jobs:
            scribe-enable: true
            scribe-clientid: ${{ secrets.clientid }}
            scribe-clientsecret: ${{ secrets.clientsecret }}
-           scribe-name: ${{ secrets.productkey }}
+           name: ${{ secrets.productkey }}
            scribe-loginurl: ${{ env.LOGIN_URL }}
-           scribe-auth0.audience: ${{ env.AUTH0_AUDIANCE }}
-           scribe-url: ${{ env.URL }}
+           scribe-auth0.audience: ${{ env.AUTH0 }}
+           scribe-url: ${{ env.SCRIBE_URL }}
 
 
       - name: Build and push remote
@@ -77,15 +77,16 @@ jobs:
         id: gensbom_bom_image
         uses: scribe-security/actions/gensbom/bom@master
         with:
+           type: docker # to be included only if you're creating your docker image locally
            target: 'mongo-express:1.0.0-alpha.4'
            verbose: 2
            scribe-enable: true
            scribe-clientid: ${{ secrets.clientid }}
            scribe-clientsecret: ${{ secrets.clientsecret }}
-           scribe-name: ${{ secrets.productkey }}
+           name: ${{ secrets.productkey }}
            scribe-loginurl: ${{ env.LOGIN_URL }}
-           scribe-auth0.audience: ${{ env.AUTH0_AUDIANCE }}
-           scribe-url: ${{ env.URL }}
+           scribe-auth0.audience: ${{ env.AUTH0 }}
+           scribe-url: ${{ env.SCRIBE_URL }}
 
 
       - uses: actions/upload-artifact@v2
