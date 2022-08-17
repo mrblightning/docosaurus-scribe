@@ -77,7 +77,7 @@ jobs:
         id: gensbom_bom_image
         uses: scribe-security/actions/gensbom/bom@master
         with:
-           type: docker # to be included only if you're creating your docker image locally
+           type: docker # To be included only if you want to to use docker daemon to access the image (for example, creating your docker image locally)
            target: 'mongo-express:1.0.0-alpha.4'
            verbose: 2
            scribe-enable: true
