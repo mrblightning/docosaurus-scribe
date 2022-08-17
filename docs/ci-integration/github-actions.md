@@ -27,7 +27,7 @@ name: example workflow
 
 env:
   LOGIN_URL: "https://scribesecurity-beta.us.auth0.com"
-  AUTH0: "api.beta.scribesecurity.com"
+  AUTH: "api.beta.scribesecurity.com"
   SCRIBE_URL: "https://api.beta.scribesecurity.com"
 
 on: 
@@ -62,7 +62,7 @@ jobs:
            scribe-client-secret: ${{ secrets.clientsecret }}
            product-key: ${{ secrets.productkey }}
            scribe-login-url: ${{ env.LOGIN_URL }}
-           scribe-auth.audience: ${{ env.AUTH0 }}
+           scribe-auth.audience: ${{ env.AUTH }}
            scribe-url: ${{ env.SCRIBE_URL }}
 
 
@@ -85,7 +85,7 @@ jobs:
            scribe-client-secret: ${{ secrets.clientsecret }}
            product-key: ${{ secrets.productkey }}
            scribe-login-url: ${{ env.LOGIN_URL }}
-           scribe-auth.audience: ${{ env.AUTH0 }}
+           scribe-auth.audience: ${{ env.AUTH }}
            scribe-url: ${{ env.SCRIBE_URL }}
 
 
