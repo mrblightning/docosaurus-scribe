@@ -5,7 +5,7 @@ sidebar_position: 2
 # GitHub Actions
 
 :::info Note:
-The configuration requires <em><b>product_key</b></em>, <em><b>clientid</b></em>, and <em><b>clientsecret</b></em> credentials obtained from your Scribe hub account at: `Home>Products>[$your_product]>Setup`
+The configuration requires <em><b>product-key</b></em>, <em><b>client-id</b></em>, and <em><b>client-secret</b></em> credentials obtained from your Scribe hub account at: `Home>Products>[$your_product]>Setup`
 
 Or when you add a new product.
 :::
@@ -58,11 +58,11 @@ jobs:
            target: 'mongo-express-scm'
            verbose: 2
            scribe-enable: true
-           scribe-clientid: ${{ secrets.clientid }}
-           scribe-clientsecret: ${{ secrets.clientsecret }}
-           name: ${{ secrets.productkey }}
-           scribe-loginurl: ${{ env.LOGIN_URL }}
-           scribe-auth0.audience: ${{ env.AUTH0 }}
+           scribe-client-id: ${{ secrets.clientid }}
+           scribe-client-secret: ${{ secrets.clientsecret }}
+           product-key: ${{ secrets.productkey }}
+           scribe-login-url: ${{ env.LOGIN_URL }}
+           scribe-auth.audience: ${{ env.AUTH0 }}
            scribe-url: ${{ env.SCRIBE_URL }}
 
 
@@ -81,11 +81,11 @@ jobs:
            target: 'mongo-express:1.0.0-alpha.4'
            verbose: 2
            scribe-enable: true
-           scribe-clientid: ${{ secrets.clientid }}
-           scribe-clientsecret: ${{ secrets.clientsecret }}
-           name: ${{ secrets.productkey }}
-           scribe-loginurl: ${{ env.LOGIN_URL }}
-           scribe-auth0.audience: ${{ env.AUTH0 }}
+           scribe-client-id: ${{ secrets.clientid }}
+           scribe-client-secret: ${{ secrets.clientsecret }}
+           product-key: ${{ secrets.productkey }}
+           scribe-login-url: ${{ env.LOGIN_URL }}
+           scribe-auth.audience: ${{ env.AUTH0 }}
            scribe-url: ${{ env.SCRIBE_URL }}
 
 
