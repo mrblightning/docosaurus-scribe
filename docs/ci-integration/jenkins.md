@@ -63,8 +63,8 @@ pipeline {
                         gensbom dir:mongo-express-scm \
                             --context-type jenkins \
                             --output-directory ./scribe/gensbom \ 
-                            -E -U $SCRIBE_CLIENT_ID -P $SCRIBE_CLIENT_SECRET \
-                            --product-key $SCRIBE_PRODUCT_KEY \
+                            -E -U --product-key $SCRIBE_PRODUCT_KEY \
+                            $SCRIBE_CLIENT_ID -P $SCRIBE_CLIENT_SECRET \
                             --scribe.login-url=https://scribesecurity-beta.us.auth0.com --scribe.auth.audience=api.beta.scribesecurity.com \
                             --scribe.url https://api.beta.scribesecurity.com \
                             -v '''
@@ -82,8 +82,8 @@ pipeline {
                         gensbom mongo-express:1.0.0-alpha.4 \
                             --context-type jenkins \
                             --output-directory ./scribe/gensbom \ 
-                            -E -U $SCRIBE_CLIENT_ID -P $SCRIBE_CLIENT_SECRET \
-                            --product-key $SCRIBE_PRODUCT_KEY \
+                            -E -U --product-key $SCRIBE_PRODUCT_KEY \
+                            $SCRIBE_CLIENT_ID -P $SCRIBE_CLIENT_SECRET \
                             --scribe.login-url=https://scribesecurity-beta.us.auth0.com --scribe.auth.audience=api.beta.scribesecurity.com \
                             --scribe.url https://api.beta.scribesecurity.com \
                             -v '''

@@ -31,16 +31,16 @@ Replace `<client-id>` with `client-id` from Scribe Hub.
 1. Optional: if your project is in Node.Js you can call *gensbom* after the checkout stage to collect evidence of hash values of the source code files to facilitate the Scribe integrity validation.
 
 ```
-$HOME/.scribe/bin/gensbom dir:<path> --scribe.client-id=$CLIENT_ID --scribe.client-secret=$CLIENT_SECRET \
---product-key=$PRODUCT_KEY --scribe.login-url=https://scribesecurity-beta.us.auth0.com \
+$HOME/.scribe/bin/gensbom dir:<path> --product-key=$PRODUCT_KEY --scribe.client-id=$CLIENT_ID \
+--scribe.client-secret=$CLIENT_SECRET --scribe.login-url=https://scribesecurity-beta.us.auth0.com \
 --scribe.auth.audience=api.beta.scribesecurity.com --scribe.url https://api.beta.scribesecurity.com -E -f -v
 ```
 
 2. Call *gensbom* after the build to generate an *SBOM* from the docker image.
 
 ```
-$HOME/.scribe/bin/gensbom <your_docker_repository:tag> --scribe.client-id=$CLIENT_ID \
---scribe.client-secret=$CLIENT_SECRET --product-key=$PRODUCT_KEY \
+$HOME/.scribe/bin/gensbom <your_docker_repository:tag> --product-key=$PRODUCT_KEY \
+--scribe.client-id=$CLIENT_ID --scribe.client-secret=$CLIENT_SECRET \
 --scribe.login-url=https://scribesecurity-beta.us.auth0.com \
 --scribe.auth.audience=api.beta.scribesecurity.com --scribe.url https://api.beta.scribesecurity.com -E -f -v
 ```

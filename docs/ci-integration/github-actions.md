@@ -58,9 +58,9 @@ jobs:
            target: 'mongo-express-scm'
            verbose: 2
            scribe-enable: true
+           product-key: ${{ secrets.productkey }}
            scribe-client-id: ${{ secrets.clientid }}
            scribe-client-secret: ${{ secrets.clientsecret }}
-           product-key: ${{ secrets.productkey }}
            scribe-login-url: ${{ env.LOGIN_URL }}
            scribe-auth.audience: ${{ env.AUTH }}
            scribe-url: ${{ env.SCRIBE_URL }}
@@ -81,9 +81,9 @@ jobs:
            target: 'mongo-express:1.0.0-alpha.4'
            verbose: 2
            scribe-enable: true
+           product-key: ${{ secrets.productkey }}
            scribe-client-id: ${{ secrets.clientid }}
            scribe-client-secret: ${{ secrets.clientsecret }}
-           product-key: ${{ secrets.productkey }}
            scribe-login-url: ${{ env.LOGIN_URL }}
            scribe-auth.audience: ${{ env.AUTH }}
            scribe-url: ${{ env.SCRIBE_URL }}
