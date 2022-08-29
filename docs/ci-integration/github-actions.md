@@ -66,28 +66,28 @@ jobs:
            scribe-url: ${{ env.SCRIBE_URL }}
 
 
-      - name: Build and push remote
-        uses: docker/build-push-action@v2
-        with:
-          context: .
-          push: true
-          tags: mongo-express:1.0.0-alpha.4
+      # Build and push your image - this example skips this step as we're using the published mongo express.
+      # - name: Build and push remote
+      #   uses: docker/build-push-action@v2
+      #   with:
+      #     context: .
+      #     push: true 
+      #     tags: mongo-express:1.0.0-alpha.4
 
       - name: Gensbom Image generate bom, upload to scribe
         id: gensbom_bom_image
         uses: scribe-security/actions/gensbom/bom@master
         with:
-           type: docker # To be included only if you want to to use docker daemon to access the image (for example, creating your docker image locally)
+          type: docker # To be included only if you want to to use docker daemon to access the image (for example, creating your docker image locally)
            target: 'mongo-express:1.0.0-alpha.4'
            verbose: 2
            scribe-enable: true
-           product-key: ${{ secrets.productkey }}
            scribe-client-id: ${{ secrets.clientid }}
            scribe-client-secret: ${{ secrets.clientsecret }}
+           product-key: ${{ secrets.productkey }}
            scribe-login-url: ${{ env.LOGIN_URL }}
-           scribe-auth.audience: ${{ env.AUTH }}
+           scribe-audience: ${{ env.AUTH }}
            scribe-url: ${{ env.SCRIBE_URL }}
-
 
       - uses: actions/upload-artifact@v2
         with:
@@ -95,5 +95,4 @@ jobs:
           path: |
             ${{ steps.gensbom_bom_scm.outputs.OUTPUT_PATH }}
             ${{ steps.gensbom_bom_image.outputs.OUTPUT_PATH }}
-            ${{ steps.valint_report.outputs.OUTPUT_PATH }}
 ```
