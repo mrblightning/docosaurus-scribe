@@ -22,10 +22,10 @@ These are the two points for adding Scribe Hub code:
 ## Supported CIs
  
 Currently, Scribe natively supports the following CI setups:
- * [Jenkins over Kubernetes](./docosaurus-scribe/docs/ci-integration/jenkins "Jenkins over Kubernetes") - Please note that support is available for **Jenkins over Kubernetes** only.
- * [GitHub actions](./docosaurus-scribe/docs/ci-integration/github-actions "GitHub actions").
+ * [Jenkins over Kubernetes](../docs/ci-integration/jenkins "Jenkins over Kubernetes") - Please note that support is available for **Jenkins over Kubernetes** only.
+ * [GitHub actions](../docs/ci-integration/github-actions "GitHub actions").
  
-If you have another CI, you can integrate it using these [generic integration instructions](./docosaurus-scribe/docs/ci-integration/general' "generic integration instructions").  
+If you have another CI, you can integrate it using these [generic integration instructions](../docs/ci-integration/general "generic integration instructions").  
  
 OK, Let's get started!
  
