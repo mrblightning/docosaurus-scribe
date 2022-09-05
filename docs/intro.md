@@ -19,7 +19,7 @@ Scribe allows you to connect to the Hub as many projects/pipelines as you want.
 ## Before you begin 
 
 - **Work environment:** Scribe Hub has a web user interface. Scribe's evidence collectors run on Linux or Mac.
-- **Permissions:** You will need permission to modify your project's build script to a relevant code snippet connecting your project to Scribe Hub.
+- **Permissions:** You will need permission to modify your project's build script to add a relevant code snippet connecting your project to Scribe Hub.
 - **Your project:** Scribe collects evidence for projects of any type of programming language that build a container image. However, in this release, Scribe's integrity validation works only with Node.js projects.
 
 ## Procedure 
