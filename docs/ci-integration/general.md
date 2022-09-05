@@ -35,14 +35,11 @@ These are the two points for adding Scribe Hub code:
 
 ```
 $HOME/.scribe/bin/gensbom dir:<path> --product-key=$PRODUCT_KEY --scribe.client-id=$CLIENT_ID \
---scribe.client-secret=$CLIENT_SECRET --scribe.login-url=https://scribesecurity-beta.us.auth0.com \
---scribe.auth.audience=api.beta.scribesecurity.com --scribe.url https://api.beta.scribesecurity.com -E -f -v
+--scribe.client-secret=$CLIENT_SECRET -E -f -v
 ```
 
 * **Final built image**: Generating SBOM right after the final Docker image is created. This is the main and ___mandatory___ point.  
 ```
    $HOME/.scribe/bin/gensbom <your_docker_repository:tag> --product-key=$PRODUCT_KEY \
---scribe.client-id=$CLIENT_ID --scribe.client-secret=$CLIENT_SECRET \
---scribe.login-url=https://scribesecurity-beta.us.auth0.com \
---scribe.auth.audience=api.beta.scribesecurity.com --scribe.url https://api.beta.scribesecurity.com -E -f -v
+--scribe.client-id=$CLIENT_ID --scribe.client-secret=$CLIENT_SECRET -E -f -v
 ```

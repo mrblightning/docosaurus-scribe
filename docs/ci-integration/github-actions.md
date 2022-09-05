@@ -34,11 +34,6 @@ The following example workflow builds a mongo express project. In this example, 
 ```YAML
 name: example workflow
 
-env:
-  LOGIN_URL: "https://scribesecurity-beta.us.auth0.com"
-  AUTH: "api.beta.scribesecurity.com"
-  SCRIBE_URL: "https://api.beta.scribesecurity.com"
-
 on: 
   push:
     tags:
@@ -70,9 +65,6 @@ jobs:
            scribe-client-id: ${{ secrets.clientid }}
            scribe-client-secret: ${{ secrets.clientsecret }}
            product-key: ${{ secrets.productkey }}
-           scribe-login-url: ${{ env.LOGIN_URL }}
-           scribe-audience: ${{ env.AUTH }}
-           scribe-url: ${{ env.SCRIBE_URL }}
 
       # Build and push your image - this example skips this step as we're using the published mongo express.
       # - name: Build and push remote
@@ -93,9 +85,6 @@ jobs:
            scribe-client-id: ${{ secrets.clientid }}
            scribe-client-secret: ${{ secrets.clientsecret }}
            product-key: ${{ secrets.productkey }}
-           scribe-login-url: ${{ env.LOGIN_URL }}
-           scribe-audience: ${{ env.AUTH }}
-           scribe-url: ${{ env.SCRIBE_URL }}
 
       - uses: actions/upload-artifact@v2
         with:

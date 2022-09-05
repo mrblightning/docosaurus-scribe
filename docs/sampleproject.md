@@ -43,10 +43,7 @@ Try out Scribe with our sample open-source Node.js project by following these st
       ```sh
       $HOME/.scribe/bin/gensbom dir:image-demo --product-key=$PRODUCT_KEY \
       --scribe.client-id=$CLIENT_ID \
-      --scribe.client-secret=$CLIENT_SECRET \
-      --scribe.login-url=https://scribesecurity-beta.us.auth0.com \
-      --scribe.auth.audience=api.beta.scribesecurity.com \
-      --scribe.url https://api.beta.scribesecurity.com -E -f -v
+      --scribe.client-secret=$CLIENT_SECRET -E -f -v
       ```
 
 4. Build a Docker image for the project  
@@ -60,10 +57,7 @@ Try out Scribe with our sample open-source Node.js project by following these st
     ```sh
     $HOME/.scribe/bin/gensbom bom image-demo:latest --product-key=$PRODUCT_KEY \ 
     --scribe.client-id=$CLIENT_ID \
-    --scribe.client-secret=$CLIENT_SECRET \
-    --scribe.login-url=https://scribesecurity-beta.us.auth0.com \  
-    --scribe.auth.audience=api.beta.scribesecurity.com \
-    --scribe.url https://api.beta.scribesecurity.com -E -f -v  
+    --scribe.client-secret=$CLIENT_SECRET -E -f -v  
     ```
 
 6. When `gensbom` is done, check out your your **[Scribe Hub](https://prod.hub.scribesecurity.com/ "Scribe Hub Link")** Home>Products>[$product] page and you'll see a new build being updated. Clicking on that build will allow you to review the integrity information and SBOM for the new build you have just uploaded.
