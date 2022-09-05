@@ -1,34 +1,42 @@
 ---
 description: Setting up your Continuous Integration (CI)
 ---
- 
- 
-# Setting up your Continuous Integration (CI)
- 
-Adding Scribe Hub code snippets to your CI pipeline will automate the process of generating SBOMs and analyzing reports.
- 
-The following scheme demonstrates the two points on your CI pipeline to enter the Scribe Hub code snippets:
- 
-<img src='../img/ci/ci_diagram.jpg' alt='Generic Pipeline' width="100%"/>
 
- 
-Once your CI pipeline is set up, running your pipeline (your builds) will activate Scribes' evidence collectors automatically. Your project's code integrity will be validated and the results will be uploaded to Scribe Hub.
- 
-## Two points of validation
+
+# Setting up Scribe protection in your CI pipeline
+
+Adding Scribe Hub code snippets to your Continuous Integration (CI) pipeline automates the process of generating SBOMs and analysis reports.
+
+The following scheme demonstrates the two points on your CI pipeline to enter the Scribe Hub code snippets:
+
+![Two points on a generic pipeline to enter scribe code snippets](../../static/img/ci/ci_diagram.jpg "Two points on a generic pipeline to enter scribe code snippets")
+
+
+Once your CI pipeline is set up, running your pipeline (your builds) will activate Scribes' evidence collectors automatically. The integrity of your project code is validated and the results are uploaded to Scribe Hub.
+
+## Where to place Scribe Code in your pipeline 
 These are the two points for adding Scribe Hub code:
-1. Source Code Checkout - Generates an image of your Node.js source code file structure after checkout. This is an important yet an ___optional___ point.
-1. Image of final code - Generates an SBOM right after the final image is created. This is the main and ___mandatory___ point.
- 
+* **Source Code Checkout**: Collects evidence of your Node.js source code files after checkout. This is an important but ___optional___ point.
+
+* **Final built image**: Generates an SBOM right after the final image is created. This is the main and ___mandatory___ point.
+
 ## Supported CIs
- 
+
 Currently, Scribe natively supports the following CI setups:
- * [Jenkins over Kubernetes](../docs/ci-integration/jenkins "Jenkins over Kubernetes") - Please note that support is available for **Jenkins over Kubernetes** only.
- * [GitHub actions](../docs/ci-integration/github-actions "GitHub actions").
- 
+*  [Jenkins](../docs/ci-integration/jenkins "Jenkins over Kubernetes"): This version supports ***Jenkins over Kubernetes*** only. 
+* [Github Actions](../docs/ci-integration/github-actions "GitHub actions").
+
 If you have another CI, you can integrate it using these [generic integration instructions](../docs/ci-integration/general "generic integration instructions").  
- 
-OK, Let's get started!
- 
-<!--<img src='../img/ci/jenkins.png' alt='integrating with Jenkins over Kubernetes' width="20px"/>
-<img src='../img/ci/github.png' alt='integrating with GitHub actions' width="20px"/>-->
+
+<!--- Are these images needed? they need to be resized 
+
+
+[![Jenkins](../../static/img/ci/jenkins.png "integrating with Jenkins over Kubernetes")](./docosaurus-scribe/docs/ci-integration/jenkins )
+
+
+
+
+[![GitHub](../../static/img/ci/github.png "integrating with GitHub actions")](./docosaurus-scribe/docs/ci-integration/github-actions )
+
+-->
 

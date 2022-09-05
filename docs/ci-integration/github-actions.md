@@ -1,26 +1,35 @@
 ---
 sidebar_position: 2
+sidebar_label: GitHub Actions
 ---
 
 # GitHub Actions
 
-:::info Note:
-The configuration requires <em><b>product-key</b></em>, <em><b>client-id</b></em>, and <em><b>client-secret</b></em> credentials obtained from your Scribe hub account at: `Home>Products>[$your_product]>Setup`
+## Before you begin
 
-Or when you add a new product.
-:::
+Integrating Scribe Hub with Jenkins requires the following credentials that are found in the product setup dialog (In your **[Scribe Hub](https://prod.hub.scribesecurity.com/ "Scribe Hub Link")** go to Home>Products>[$product]>Setup)
 
-This action includes *gensbom* - the tool creating the *SBOM*.
+* **product key**
+* **client id**
+* **client secret**
 
-*gensbom* has other capabilities and CLI options but the simplest integration is to call it to create an *SBOM* of the repository and the final image. these *SBOMs* are then automatically uploaded to Scribe Hub.
+>Note that the product key is unique per product, while the client id and secret are unique for your account.
 
-## Step 1: Add the credentials to GitHub
+## Gensbom - Creating your SBOM
+*Gensbom* is Scribe Hubs' tool used to collect evidence and generate an SBOM.
 
-Add the credentials according to the GitHub instructions <a href='https://docs.github.com/en/actions/security-guides/encrypted-secrets'>here</a>. 
+The simplest integration is to automate calling Scribe to collect evidence of the repository and create an SBOM of the final image. The evidence and SBOM are then automatically uploaded to Scribe Hub. 
+While *Gensbom* does have other capabilities and CLI options, we will focus on its' basic usage.
 
-## Step 2: Call Scribe *gensbom* action from your GitHub workflow
+### Step 1. Add the credentials to GitHub
+Add the credentials according to the [GitHub instructions](https://docs.github.com/en/actions/security-guides/encrypted-secrets/ "GitHub Instructions"). 
 
-The following example workflow builds project mongo express and calls Scribe *gensbom* twice: after checkout and after the docker image is built.
+### Step 2. Add Code snippets to Generate your SBOMs 
+
+Call *gensbom* from your GitHub flow. Use the 
+following example to add the code snippets.
+
+The following example workflow builds a mongo express project. In this example, *gensbom* is called twice: after checkout and after the docker image is built.
 
 ```YAML
 name: example workflow
@@ -58,13 +67,12 @@ jobs:
            target: 'mongo-express-scm'
            verbose: 2
            scribe-enable: true
-           product-key: ${{ secrets.productkey }}
            scribe-client-id: ${{ secrets.clientid }}
            scribe-client-secret: ${{ secrets.clientsecret }}
+           product-key: ${{ secrets.productkey }}
            scribe-login-url: ${{ env.LOGIN_URL }}
-           scribe-auth.audience: ${{ env.AUTH }}
+           scribe-audience: ${{ env.AUTH }}
            scribe-url: ${{ env.SCRIBE_URL }}
-
 
       # Build and push your image - this example skips this step as we're using the published mongo express.
       # - name: Build and push remote
