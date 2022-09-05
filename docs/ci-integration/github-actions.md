@@ -21,15 +21,43 @@ Integrating Scribe Hub with Jenkins requires the following credentials that are 
 The simplest integration is to automate calling Scribe to collect evidence of the repository and create an SBOM of the final image. The evidence and SBOM are then automatically uploaded to Scribe Hub. 
 While *Gensbom* does have other capabilities and CLI options, we will focus on its' basic usage.
 
-### Step 1. Add the credentials to GitHub
-Add the credentials according to the [GitHub instructions](https://docs.github.com/en/actions/security-guides/encrypted-secrets/ "GitHub Instructions"). 
 
-### Step 2. Add Code snippets to Generate your SBOMs 
+1. Add the credentials according to the [GitHub instructions](https://docs.github.com/en/actions/security-guides/encrypted-secrets/ "GitHub Instructions"). Based on the code example below be sure to call the secrets **clientid** for the client-id, **clientsecret** for the           client-secret and **productkey** for the product-key.
+2. Add Code snippets to your pipeline from your GitHub flow:   
+    * Replace the `Mongo express` repo in the example with your repo name.
+    ```YAML
+                target: <repo-name>
+    ```
+    * Call `gensbom` right after checkout to collect hash value evidence of the source code files.
+    ```YAML
+      - name: Gensbom Scm generate bom, upload to scribe
+        id: gensbom_bom_scm
+        uses: scribe-security/actions/gensbom/bom@master
+        with:
+           type: dir
+           target: <repo-name>
+           verbose: 2
+           scribe-enable: true
+           scribe-client-id: ${{ secrets.clientid }}
+           scribe-client-secret: ${{ secrets.clientsecret }}
+           product-key: ${{ secrets.productkey }}
+    ```
+    * Call `gensbom` to generate an SBOM from the final Docker image.
+    ```YAML
+        - name: Gensbom Image generate bom, upload to scribe
+        id: gensbom_bom_image
+        uses: scribe-security/actions/gensbom/bom@master
+        with:
+          type: docker # To be included only if you want to to use docker daemon to access the image (for example, creating your docker image locally)
+           target: <image-name:tag>
+           verbose: 2
+           scribe-enable: true
+           scribe-client-id: ${{ secrets.clientid }}
+           scribe-client-secret: ${{ secrets.clientsecret }}
+           product-key: ${{ secrets.productkey }}
+    ```
 
-Call *gensbom* from your GitHub flow. Use the 
-following example to add the code snippets.
-
-The following example workflow builds a mongo express project. In this example, *gensbom* is called twice: after checkout and after the docker image is built.
+Here's the full example pipeline:
 
 ```YAML
 name: example workflow

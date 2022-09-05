@@ -24,7 +24,9 @@ Integrating Scribe Hub with Jenkins requires the following credentials that are 
 1. Add the credentials to your CI system.
 Here is an example for setting your *client id* credential as an environment variable:  
    ```js
-   export CLIENT_ID=<client_id>
+   export CLIENT_ID=<client-id>
+   export PRODUCT_KEY=<product-key>
+   export CLIENT_SECRET=<client-secret>
    ```
    Replace <client_id> with the client id value you received from **Scribe Hub**. In the same way you can add the client secret and the product key as environment variables.
 
