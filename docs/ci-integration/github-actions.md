@@ -22,7 +22,7 @@ The simplest integration is to automate calling Scribe to collect evidence of th
 While *Gensbom* does have other capabilities and CLI options, we will focus on its' basic usage.
 
 
-1. Add the credentials according to the [GitHub instructions](https://docs.github.com/en/actions/security-guides/encrypted-secrets/ "GitHub Instructions"). Based on the code example below be sure to call the secrets **clientid** for the client-id, **clientsecret** for the           client-secret and **productkey** for the product-key.
+1. Add the credentials according to the [GitHub instructions](https://docs.github.com/en/actions/security-guides/encrypted-secrets/ "GitHub Instructions"). Based on the code example below be sure to call the secrets **clientid** for the **client-id**, **clientsecret** for the           **client-secret** and **productkey** for the **product-key**.
 2. Add Code snippets to your pipeline from your GitHub flow:   
     * Replace the `Mongo express` repo in the example with your repo name.
     ```YAML
