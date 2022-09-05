@@ -18,9 +18,9 @@ Scribe allows you to connect to the Hub as many projects/pipelines as you want.
 
 ## Before you begin 
 
-- **Work environment:** Scribe Hub is a service that runs on your browser. Scribe's evidence collectors run on Mac or Linux.
-- **Permissions:** You will need permission to access your project's pipeline and the ability to add the relevant code snippets connecting your projects to Scribe Hub.
-- **Your project:** In this release, our tools support verifying Node.js projects using NPM. The project must create an Open Containers Image (OCI) such as a Docker image, for Scribe to validate.
+- **Work environment:** Scribe Hub has a web user interface. Scribe's evidence collectors run on Linux or Mac.
+- **Permissions:** You will need permission to modify your project's build script to a relevant code snippet connecting your project to Scribe Hub.
+- **Your project:** Scribe collects evidence for projects of any type of programming language that build a container image. However, in this release, Scribe's integrity validation works only with Node.js projects.
 
 ## Procedure 
 1. In your browser, go to **[Scribe Hub](https://prod.hub.scribesecurity.com/ "Scribe Hub Link")**. If you have not yet registered, do so now.

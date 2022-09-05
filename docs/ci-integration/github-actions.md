@@ -26,7 +26,7 @@ While *Gensbom* does have other capabilities and CLI options, we will focus on i
 2. Add Code snippets to your pipeline from your GitHub flow:   
     * Replace the `Mongo express` repo in the example with your repo name.
     ```YAML
-                target: <repo-name>
+      target: <repo-name>
     ```
     * Call `gensbom` right after checkout to collect hash value evidence of the source code files.
     ```YAML
